@@ -1,0 +1,57 @@
+html,
+body,
+header,
+#intro {
+    height: 100%;
+}
+
+#intro {
+    background: url("../img/cover1.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#intro1
+{
+height: 108%;
+background: url("../img/cover1.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#lis
+{
+color: #f7f6f6; font-family: roboto; font-size: 17px;
+}
+#lis:active
+{
+background-color: #ffffff; outline:none ;
+}
+:visited
+{
+    background-color: #ffffff; outline:none ;
+    }
+
+#navi {
+  min-height: 20px;
+}
+#sidenav-main {
+
+   background-color:#111721; 
+}
+.body 
+{
+    background-color: #FDF9F1;
+}
+#badge-notify
+{
+    position: relative ;
+    bottom :-5px;
+    LEFT:-18px;
+}
+.label 
+{
+    color:black;
+}
