@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Planning;
+use App\User;
 use Image;
 class PlanningController extends Controller
 {
@@ -17,6 +18,18 @@ class PlanningController extends Controller
     {
         //
         return view('ajoutplan');
+    }
+    public function update_avatar(Request $request){
+    	// Handle the user upload of avatar
+    	if($request->hasFile('photo')){
+    		$avatar = $request->file('photo');
+    		$filename = time() . '.' . $avatar->getClientOriginalExtension();
+    		Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename ) );
+            $a = new Planning;
+    		$a-> photo = $filename;
+    		$a->save();
+    	}
+    	//return view('prof', array('user' => Auth::user()) );
     }
 
     /**
@@ -91,6 +104,12 @@ class PlanningController extends Controller
     public function show($id)
     {
         //
+        $user=User::find($id);
+        $var =$user->grp;
+        $planning=Planning::find($var);
+      
+     
+     return view('/affichplan',compact('planning','user'));
     }
 
     /**

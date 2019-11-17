@@ -28,11 +28,15 @@ Route::get('/', function () { return view('Index'); });
 
 /*--------------------------------------------------*/
 //la page qu'obtient le prof apres le choix de l'index
-Route::get('/choix_prof',function(){ return view('choix_prof'); });
+//Route::get('/choix_prof',function(){ return view('choix_prof'); });
 
 /*--------------------------------------------------*/
  //la page qu'obtient l'etudiant apres le choix de l'index
 Route::get('/choix_etud',function(){ return view('choix_etudiant'); });
 Route::get('/ajoutplan','PlanningController@index');
 Route::Post('/addplan','PlanningController@store')->name('addplan');
+$id=2;
+Route::resource('affichplan', 'PlanningController');
 
+Route::get('/deconnexion','Controller@dec')->name('deconnexion');
+Route::resource('/prof','ProfilController');

@@ -24,7 +24,7 @@
      <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="basicExampleNav">
       <!-- Links -->
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#about">A propos
             <span class="sr-only">(current)</span>
@@ -32,9 +32,6 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#help">Aide</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/login">connexion</a>
         </li>
       </ul> 
     </div>
@@ -45,16 +42,18 @@
       <div class="container-fluid d-flex align-items-center justify-content-center h-100">
             <div class="row d-flex justify-content-center text-center">
                 <div class="col-md-10">
-                    <h2 style="font-size:7vw" class="display-2 font-weight-bold white-text pt-5 mb-2">Takharroudj </h2>
+                    <h2 style="font-size:7vw" class="display-2 font-weight-bold white-text pt-5 mb-2"> eScolarité </h2>
                     <hr class="hr-light">
-                    <h4 class="white-text my-4">Application de gestion de scolrité</h4>
-                    <!--liste déroulante -->
-                   <select name="type" class="browser-default custom-select" onchange="if(this.value!=''){document.location.href=this.value}">
-                    <option value="/login">etudiant</option>
-                    <option value=" /login" >enseignant</option>
-                    <option value="/login">adminstrateur</option>
+                    <h4 class="white-text my-4">Outil de scolarité ciblant les étudiants, enseignants et l'administration</h4>
+                    <!--liste déroulante 
+                    <select name="type" class="browser-default custom-select" onchange="if(this.value!=''){document.location.href=this.value}">
+                    <option value="0">faire un choix Encadrant/Etudiant</option>
+                    <option value=" /choix_prof" >Encadrant</option>
+                    <option value="/login">Etudiant</option>
                     </select>
-                    
+                    liste déroulante -->
+                    <a href="/login">
+                    <button type="button" class="btn btn-outline-white btn-lg">Connexion<i></i></button></a>
                     
                 </div>
             </div>

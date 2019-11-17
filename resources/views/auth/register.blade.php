@@ -11,6 +11,21 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+
+                                    <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-left"  style="color: #ffffe5;">{{ __('grp') }}</label>
+
+                            <div class="col-md-8">
+                                <input id="grp" type="text" class="form-control{{ $errors->has('grp') ? ' is-invalid' : '' }}" name="grp" value="{{ old('grp') }}" required autofocus  style="border-radius:20px;">
+
+                                @if ($errors->has('grp'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('grp') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
